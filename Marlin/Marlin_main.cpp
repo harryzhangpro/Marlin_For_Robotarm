@@ -1506,7 +1506,7 @@ void process_commands()
           plan_set_position(delta[X_AXIS], delta[Y_AXIS], delta[Z_AXIS], current_position[E_AXIS]);
 
 #else// NOT DELTA
-          #ifdef SCARA 
+    #ifdef SCARA 
 		//current_position[X_AXIS] = 0;
 		//current_position[Y_AXIS] = 0;
 		//current_position[Z_AXIS] = 0;
@@ -1514,7 +1514,7 @@ void process_commands()
 		float TempDeltaZ;
 		
 		TempDeltaZ = delta[Z_AXIS];
-		//HOMEAXIS(Y);
+		HOMEAXIS(Y);
 		HOMEAXIS(X);
 		
 		delta[X_AXIS]=ManualHomePos[X_AXIS];
@@ -1522,6 +1522,8 @@ void process_commands()
 		//delta[Z_AXIS]=ManualHomePos[Z_AXIS];
 		
 		calculate_SCARA_forward_Transform(ManualHomePos);
+
+
 		for(int8_t i=0; i < 3; i++)
 		{
 			destination[i]=current_position[i]=delta[i];
@@ -1540,6 +1542,14 @@ void process_commands()
 			delta[Z_AXIS]=ManualHomePos[Z_AXIS];
 			plan_set_position(delta[X_AXIS], delta[Y_AXIS], delta[Z_AXIS], current_position[E_AXIS]);
 		}	
+
+    SERIAL_ECHOPGM("cartesian x="); SERIAL_ECHO(current_position[X_AXIS]);
+    SERIAL_ECHOPGM(" y="); SERIAL_ECHO(current_position[Y_AXIS]);
+    SERIAL_ECHOPGM(" z="); SERIAL_ECHOLN(current_position[Z_AXIS]);
+    
+    SERIAL_ECHOPGM("delta x="); SERIAL_ECHO(delta[X_AXIS]);
+    SERIAL_ECHOPGM(" y="); SERIAL_ECHO(delta[Y_AXIS]);
+    SERIAL_ECHOPGM(" z="); SERIAL_ECHOLN(delta[Z_AXIS]);
 
 	#else
 		  home_all_axis = !((code_seen(axis_codes[X_AXIS])) || (code_seen(axis_codes[Y_AXIS])) || (code_seen(axis_codes[Z_AXIS])));
@@ -1940,6 +1950,14 @@ void process_commands()
 					#ifdef SCARA
 						calculate_delta(current_position);
 						plan_set_position(delta[X_AXIS], delta[Y_AXIS], delta[Z_AXIS], current_position[E_AXIS]);
+
+            SERIAL_ECHOPGM("cartesian x="); SERIAL_ECHO(current_position[X_AXIS]);
+            SERIAL_ECHOPGM(" y="); SERIAL_ECHO(current_position[Y_AXIS]);
+            SERIAL_ECHOPGM(" z="); SERIAL_ECHOLN(current_position[Z_AXIS]);
+            
+            SERIAL_ECHOPGM("delta x="); SERIAL_ECHO(delta[X_AXIS]);
+            SERIAL_ECHOPGM(" y="); SERIAL_ECHO(delta[Y_AXIS]);
+            SERIAL_ECHOPGM(" z="); SERIAL_ECHOLN(delta[Z_AXIS]);
 					#else
 						plan_set_position(current_position[X_AXIS], current_position[Y_AXIS], current_position[Z_AXIS], current_position[E_AXIS]);
 					#endif

@@ -1,4 +1,6 @@
 # Marlin_For_Robotarm
+
+# English support will be added in this week!!!
 1、加入限位开关以获取自动校准功能，启用G28功能
 2、支持G92直接控制机械臂角度功能
 3、支持设置自定义在笛卡尔坐标系上的偏移量

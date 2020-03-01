@@ -418,13 +418,13 @@ ISR(TIMER1_COMPA_vect)
         #endif          
         {
           #if defined(X_MIN_PIN) && X_MIN_PIN > -1
-            // bool x_min_endstop=(READ(X_MIN_PIN) != X_MIN_ENDSTOP_INVERTING);
-            // if(x_min_endstop && old_x_min_endstop && (current_block->steps_x > 0)) {
-            //   endstops_trigsteps[X_AXIS] = count_position[X_AXIS];
-            //   endstop_x_hit=true;
-            //   step_events_completed = current_block->step_event_count;
-            // }
-            // old_x_min_endstop = x_min_endstop;
+            bool x_min_endstop=(READ(X_MIN_PIN) != X_MIN_ENDSTOP_INVERTING);
+            if(x_min_endstop && old_x_min_endstop && (current_block->steps_x > 0)) {
+              endstops_trigsteps[X_AXIS] = count_position[X_AXIS];
+              endstop_x_hit=true;
+              step_events_completed = current_block->step_event_count;
+            }
+            old_x_min_endstop = x_min_endstop;
           #endif
         }
       }
@@ -439,13 +439,13 @@ ISR(TIMER1_COMPA_vect)
         #endif          
         {
           #if defined(X_MAX_PIN) && X_MAX_PIN > -1
-            // bool x_max_endstop=(READ(X_MAX_PIN) != X_MAX_ENDSTOP_INVERTING);
-            // if(x_max_endstop && old_x_max_endstop && (current_block->steps_x > 0)){
-            //   endstops_trigsteps[X_AXIS] = count_position[X_AXIS];
-            //   endstop_x_hit=true;
-            //   step_events_completed = current_block->step_event_count;
-            // }
-            // old_x_max_endstop = x_max_endstop;
+            bool x_max_endstop=(READ(X_MAX_PIN) != X_MAX_ENDSTOP_INVERTING);
+            if(x_max_endstop && old_x_max_endstop && (current_block->steps_x > 0)){
+              endstops_trigsteps[X_AXIS] = count_position[X_AXIS];
+              endstop_x_hit=true;
+              step_events_completed = current_block->step_event_count;
+            }
+            old_x_max_endstop = x_max_endstop;
           #endif
         }
       }
@@ -459,13 +459,13 @@ ISR(TIMER1_COMPA_vect)
       CHECK_ENDSTOPS
       {
         #if defined(Y_MIN_PIN) && Y_MIN_PIN > -1
-          // bool y_min_endstop=(READ(Y_MIN_PIN) != Y_MIN_ENDSTOP_INVERTING);
-          // if(y_min_endstop && old_y_min_endstop && (current_block->steps_y > 0)) {
-          //   endstops_trigsteps[Y_AXIS] = count_position[Y_AXIS];
-          //   endstop_y_hit=true;
-          //   step_events_completed = current_block->step_event_count;
-          // }
-          // old_y_min_endstop = y_min_endstop;
+          bool y_min_endstop=(READ(Y_MIN_PIN) != Y_MIN_ENDSTOP_INVERTING);
+          if(y_min_endstop && old_y_min_endstop && (current_block->steps_y > 0)) {
+            endstops_trigsteps[Y_AXIS] = count_position[Y_AXIS];
+            endstop_y_hit=true;
+            step_events_completed = current_block->step_event_count;
+          }
+          old_y_min_endstop = y_min_endstop;
         #endif
       }
     }
@@ -473,13 +473,13 @@ ISR(TIMER1_COMPA_vect)
       CHECK_ENDSTOPS
       {
         #if defined(Y_MAX_PIN) && Y_MAX_PIN > -1
-          // bool y_max_endstop=(READ(Y_MAX_PIN) != Y_MAX_ENDSTOP_INVERTING);
-          // if(y_max_endstop && old_y_max_endstop && (current_block->steps_y > 0)){
-          //   endstops_trigsteps[Y_AXIS] = count_position[Y_AXIS];
-          //   endstop_y_hit=true;
-          //   step_events_completed = current_block->step_event_count;
-          // }
-          // old_y_max_endstop = y_max_endstop;
+          bool y_max_endstop=(READ(Y_MAX_PIN) != Y_MAX_ENDSTOP_INVERTING);
+          if(y_max_endstop && old_y_max_endstop && (current_block->steps_y > 0)){
+            endstops_trigsteps[Y_AXIS] = count_position[Y_AXIS];
+            endstop_y_hit=true;
+            step_events_completed = current_block->step_event_count;
+          }
+          old_y_max_endstop = y_max_endstop;
         #endif
       }
     }

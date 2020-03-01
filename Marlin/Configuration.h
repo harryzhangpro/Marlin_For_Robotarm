@@ -29,15 +29,15 @@
 // SCARA tower offset (position of Tower relative to bed zero position) 
 // This needs to be reasonably accurate as it defines the printbed position in the SCARA space.
 #define SCARA_OFFSET_X 80 //mm   
-#define SCARA_OFFSET_Y -100 //mm
+#define SCARA_OFFSET_Y 100 //mm
 #define SCARA_OFFSET_Z 0 //mm
 #define SCARA_RAD2DEG 57.2957795  // to convert RAD to degrees
 
 #define THETA_HOMING_OFFSET 0	//calculatated from Calibration Guide and command M360 / M114 see picture in http://reprap.harleystudio.co.za/?page_id=1073
 #define PSI_HOMING_OFFSET 0  // calculatated from Calibration Guide and command M364 / M114 see picture in http://reprap.harleystudio.co.za/?page_id=1073
 
-#define MANUAL_HOME_POS_X 0
-#define MANUAL_HOME_POS_Y 0
+#define MANUAL_HOME_POS_X 136
+#define MANUAL_HOME_POS_Y 20
 #define MANUAL_HOME_POS_Z 0
 
 #define PRINTABLE_RADIUS_MAX 320
@@ -327,10 +327,10 @@ your extruder heater takes 2 minutes to hit the target on heating.
 #ifdef ENDSTOPPULLUPS
   #define ENDSTOPPULLUP_XMAX
   #define ENDSTOPPULLUP_YMAX
-  // #define ENDSTOPPULLUP_ZMAX
+  #define ENDSTOPPULLUP_ZMAX
   #define ENDSTOPPULLUP_XMIN
   #define ENDSTOPPULLUP_YMIN
-  // #define ENDSTOPPULLUP_ZMIN
+  #define ENDSTOPPULLUP_ZMIN
 #endif
 
 // The pullups are needed if you directly connect a mechanical endswitch between the signal and ground pins.
@@ -372,8 +372,8 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 #define min_software_endstops false // If true, axis won't move to coordinates less than HOME_POS.
 #define max_software_endstops false  // If true, axis won't move to coordinates greater than the defined lengths below.
 
-#define min_software_angle_endstops true
-#define max_software_angle_endstops true
+#define min_software_angle_endstops false
+#define max_software_angle_endstops false
 
 //SCARA
 #define X_MAX_ANGLE 145.39
@@ -768,7 +768,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 // leaving it undefined or defining as 0 will disable the servo subsystem
 // If unsure, leave commented / disabled
 //
-//#define NUM_SERVOS 3 // Servo index starts with 0 for M280 command
+#define NUM_SERVOS 1 // Servo index starts with 0 for M280 command
 
 // Servo Endstops
 //

@@ -1360,20 +1360,20 @@
 #define X_STEP_PIN         62
 #define X_DIR_PIN          63
 #define X_ENABLE_PIN       61
-#define X_MIN_PIN          1
-#define X_MAX_PIN          1    //2
+#define X_MIN_PIN          -1
+#define X_MAX_PIN          38    //2
 
 #define Y_STEP_PIN         65
 #define Y_DIR_PIN          66
 #define Y_ENABLE_PIN       64
-#define Y_MIN_PIN          1
-#define Y_MAX_PIN          1    //17
+#define Y_MIN_PIN          -1
+#define Y_MAX_PIN          37    //17
 
 #define Z_STEP_PIN         68
 #define Z_DIR_PIN          69
 #define Z_ENABLE_PIN       67
-#define Z_MIN_PIN          1
-#define Z_MAX_PIN          1    //19
+#define Z_MIN_PIN          -1
+#define Z_MAX_PIN          -1    //19
 
 // #define X_STEP_PIN 25
 // #define X_DIR_PIN 23
@@ -1405,28 +1405,28 @@
 #define HEATER_2_PIN -1
 #define TEMP_2_PIN -1
 
-#define E0_STEP_PIN         43
-#define E0_DIR_PIN          45
-#define E0_ENABLE_PIN       41
+#define E0_STEP_PIN         1
+#define E0_DIR_PIN          1
+#define E0_ENABLE_PIN       1
 
-#define E1_STEP_PIN         49
-#define E1_DIR_PIN          47
-#define E1_ENABLE_PIN       48
+#define E1_STEP_PIN         -1
+#define E1_DIR_PIN          -1
+#define E1_ENABLE_PIN       -1
 
 #define SDPOWER            -1
 #define SDSS               53
-#define LED_PIN            13
-#define FAN_PIN            7
+#define LED_PIN            -1
+#define FAN_PIN            43
 #define PS_ON_PIN          12
 #define KILL_PIN           -1
 #define SUICIDE_PIN        54  //PIN that has to be turned on right after start, to keep power flowing.
-#define SERVO0_PIN         13  // untested
+#define SERVO0_PIN         -1  // untested
 
 #ifdef ULTRA_LCD
 
   #ifdef NEWPANEL
   //arduino pin witch triggers an piezzo beeper
-    #define BEEPER 18
+    #define BEEPER 46
 
     #define LCD_PINS_RS 20
     #define LCD_PINS_ENABLE 17
@@ -1483,13 +1483,13 @@
 #define X_DIR_PIN          63
 #define X_ENABLE_PIN       61
 #define X_MIN_PIN          1
-#define X_MAX_PIN          1    //2
+#define X_MAX_PIN          38    //2
 
 #define Y_STEP_PIN         65
 #define Y_DIR_PIN          66
 #define Y_ENABLE_PIN       64
 #define Y_MIN_PIN          1
-#define Y_MAX_PIN          1    //17
+#define Y_MAX_PIN          83    //17
 
 #define Z_STEP_PIN         68
 #define Z_DIR_PIN          69
@@ -1527,9 +1527,9 @@
 #define HEATER_2_PIN -1
 #define TEMP_2_PIN -1
 
-#define E0_STEP_PIN         43
-#define E0_DIR_PIN          45
-#define E0_ENABLE_PIN       41
+#define E0_STEP_PIN         -1
+#define E0_DIR_PIN          -1
+#define E0_ENABLE_PIN       -1
 
 #define E1_STEP_PIN         -1
 #define E1_DIR_PIN          -1
