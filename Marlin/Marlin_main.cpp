@@ -1543,13 +1543,13 @@ void process_commands()
 			plan_set_position(delta[X_AXIS], delta[Y_AXIS], delta[Z_AXIS], current_position[E_AXIS]);
 		}	
 
-    SERIAL_ECHOPGM("cartesian x="); SERIAL_ECHO(current_position[X_AXIS]);
-    SERIAL_ECHOPGM(" y="); SERIAL_ECHO(current_position[Y_AXIS]);
-    SERIAL_ECHOPGM(" z="); SERIAL_ECHOLN(current_position[Z_AXIS]);
+    // SERIAL_ECHOPGM("cartesian x="); SERIAL_ECHO(current_position[X_AXIS]);
+    // SERIAL_ECHOPGM(" y="); SERIAL_ECHO(current_position[Y_AXIS]);
+    // SERIAL_ECHOPGM(" z="); SERIAL_ECHOLN(current_position[Z_AXIS]);
     
-    SERIAL_ECHOPGM("delta x="); SERIAL_ECHO(delta[X_AXIS]);
-    SERIAL_ECHOPGM(" y="); SERIAL_ECHO(delta[Y_AXIS]);
-    SERIAL_ECHOPGM(" z="); SERIAL_ECHOLN(delta[Z_AXIS]);
+    // SERIAL_ECHOPGM("delta x="); SERIAL_ECHO(delta[X_AXIS]);
+    // SERIAL_ECHOPGM(" y="); SERIAL_ECHO(delta[Y_AXIS]);
+    // SERIAL_ECHOPGM(" z="); SERIAL_ECHOLN(delta[Z_AXIS]);
 
 	#else
 		  home_all_axis = !((code_seen(axis_codes[X_AXIS])) || (code_seen(axis_codes[Y_AXIS])) || (code_seen(axis_codes[Z_AXIS])));
@@ -1951,13 +1951,13 @@ void process_commands()
 						calculate_delta(current_position);
 						plan_set_position(delta[X_AXIS], delta[Y_AXIS], delta[Z_AXIS], current_position[E_AXIS]);
 
-            SERIAL_ECHOPGM("cartesian x="); SERIAL_ECHO(current_position[X_AXIS]);
-            SERIAL_ECHOPGM(" y="); SERIAL_ECHO(current_position[Y_AXIS]);
-            SERIAL_ECHOPGM(" z="); SERIAL_ECHOLN(current_position[Z_AXIS]);
+            // SERIAL_ECHOPGM("cartesian x="); SERIAL_ECHO(current_position[X_AXIS]);
+            // SERIAL_ECHOPGM(" y="); SERIAL_ECHO(current_position[Y_AXIS]);
+            // SERIAL_ECHOPGM(" z="); SERIAL_ECHOLN(current_position[Z_AXIS]);
             
-            SERIAL_ECHOPGM("delta x="); SERIAL_ECHO(delta[X_AXIS]);
-            SERIAL_ECHOPGM(" y="); SERIAL_ECHO(delta[Y_AXIS]);
-            SERIAL_ECHOPGM(" z="); SERIAL_ECHOLN(delta[Z_AXIS]);
+            // SERIAL_ECHOPGM("delta x="); SERIAL_ECHO(delta[X_AXIS]);
+            // SERIAL_ECHOPGM(" y="); SERIAL_ECHO(delta[Y_AXIS]);
+            // SERIAL_ECHOPGM(" z="); SERIAL_ECHOLN(delta[Z_AXIS]);
 					#else
 						plan_set_position(current_position[X_AXIS], current_position[Y_AXIS], current_position[Z_AXIS], current_position[E_AXIS]);
 					#endif
@@ -4335,13 +4335,13 @@ void prepare_move()
 				 SERIAL_ECHOPGM("delta[Y_AXIS]="); SERIAL_ECHOLN(delta[Y_AXIS]);
 				 SERIAL_ECHOPGM("delta[Z_AXIS]="); SERIAL_ECHOLN(delta[Z_AXIS]);
                                 */
-      SERIAL_ECHOPGM("cartesian x="); SERIAL_ECHO(destination[X_AXIS]);
-      SERIAL_ECHOPGM(" y="); SERIAL_ECHO(destination[Y_AXIS]);
-      SERIAL_ECHOPGM(" z="); SERIAL_ECHOLN(destination[Z_AXIS]);
+      // SERIAL_ECHOPGM("cartesian x="); SERIAL_ECHO(destination[X_AXIS]);
+      // SERIAL_ECHOPGM(" y="); SERIAL_ECHO(destination[Y_AXIS]);
+      // SERIAL_ECHOPGM(" z="); SERIAL_ECHOLN(destination[Z_AXIS]);
 
-      SERIAL_ECHOPGM("delta x="); SERIAL_ECHO(delta[X_AXIS]);
-      SERIAL_ECHOPGM(" y="); SERIAL_ECHO(delta[Y_AXIS]);
-      SERIAL_ECHOPGM(" z="); SERIAL_ECHOLN(delta[Z_AXIS]);
+      // SERIAL_ECHOPGM("delta x="); SERIAL_ECHO(delta[X_AXIS]);
+      // SERIAL_ECHOPGM(" y="); SERIAL_ECHO(delta[Y_AXIS]);
+      // SERIAL_ECHOPGM(" z="); SERIAL_ECHOLN(delta[Z_AXIS]);
 			clamp_to_software_angle_endstop(delta);
 			plan_buffer_line(delta[X_AXIS], delta[Y_AXIS], delta[Z_AXIS],
 			destination[E_AXIS], feedrate*feedmultiply/60/100.0,

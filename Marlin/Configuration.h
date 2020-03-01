@@ -503,12 +503,12 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 
 //360/1.8*16/360*6
 #define DEFAULT_AXIS_STEPS_PER_UNIT   {40,40,40,157}  // default steps per unit for SCARA
-#define DEFAULT_MAX_FEEDRATE          {1000, 1000, 1000, 25}    // (mm/sec)
-#define DEFAULT_MAX_ACCELERATION      {1000,1000,1000,1000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
+#define DEFAULT_MAX_FEEDRATE          {100, 100, 100, 25}    // (mm/sec)
+#define DEFAULT_MAX_ACCELERATION      {50,50,50,50}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
 //#define DEFAULT_MAX_FEEDRATE          {300, 300, 30, 25}    // (mm/sec)
 //#define DEFAULT_MAX_ACCELERATION      {300,300,20,1000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
 
-#define DEFAULT_ACCELERATION          400    // X, Y, Z and E max acceleration in mm/s^2 for printing moves
+#define DEFAULT_ACCELERATION          30    // X, Y, Z and E max acceleration in mm/s^2 for printing moves
 #define DEFAULT_RETRACT_ACCELERATION  2000  // X, Y, Z and E max acceleration in mm/s^2 for retracts
 
 // Offset of the extruders (uncomment if using more than one and relying on firmware to position when changing).
@@ -518,8 +518,8 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 // #define EXTRUDER_OFFSET_Y {0.0, 5.00}  // (in mm) for each extruder, offset of the hotend on the Y axis
 
 // The speed change that does not require acceleration (i.e. the software might assume it can be done instantaneously)
-#define DEFAULT_XYJERK                50    // (mm/sec)
-#define DEFAULT_ZJERK                 50    // (mm/sec)
+#define DEFAULT_XYJERK                5    // (mm/sec)
+#define DEFAULT_ZJERK                 5    // (mm/sec)
 #define DEFAULT_EJERK                 3    // (mm/sec)
 
 //===========================================================================
