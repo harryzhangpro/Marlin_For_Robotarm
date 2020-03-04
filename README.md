@@ -1,5 +1,5 @@
 # Marlin_For_Robotarm
-
+ A new version of Marlin has been updated to another brunch.It's working well currently,you can switch to dev_2.0 to download the code.
 # English support will be added in this week!!!
 1、加入限位开关以获取自动校准功能，启用G28功能
 2、支持G92直接控制机械臂角度功能
