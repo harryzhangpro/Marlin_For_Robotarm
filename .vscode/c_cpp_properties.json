@@ -1,0 +1,82 @@
+{
+    "configurations": [
+        {
+            "name": "!!! WARNING !!! AUTO-GENERATED FILE, PLEASE DO NOT MODIFY IT AND USE https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags"
+        },
+        {
+            "name": "Win32",
+            "includePath": [
+                "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/Marlin",
+                "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/.pio/libdeps/megaatmega2560/TMC26XStepper",
+                "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/.pio/libdeps/megaatmega2560/SlowSoftI2CMaster",
+                "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/.pio/libdeps/megaatmega2560/SailfishRGB_LED",
+                "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/.pio/libdeps/megaatmega2560/SailfishLCD",
+                "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/.pio/libdeps/megaatmega2560/Arduino-L6470/src",
+                "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/.pio/libdeps/megaatmega2560/LiquidTWI2",
+                "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/.pio/libdeps/megaatmega2560/Adafruit_MAX31865",
+                "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/.pio/libdeps/megaatmega2560/U8glib-HAL_ID1932/src",
+                "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/.pio/libdeps/megaatmega2560/Adafruit NeoPixel_ID28",
+                "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/.pio/libdeps/megaatmega2560/TMCStepper_ID5513/src",
+                "C:/Users/HB/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                "C:/Users/HB/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/.pio/libdeps/megaatmega2560/LiquidCrystal_ID136",
+                "C:/Users/HB/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                "C:/Users/HB/.platformio/packages/framework-arduino-avr/cores/arduino",
+                "C:/Users/HB/.platformio/packages/framework-arduino-avr/variants/mega",
+                "C:/Users/HB/.platformio/lib/_tmp_installing-yj051apw-package",
+                "C:/Users/HB/.platformio/lib/_tmp_installing-yzb271tw-package",
+                "C:/Users/HB/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                "C:/Users/HB/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                "C:/Users/HB/.platformio/packages/tool-unity",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/Marlin",
+                    "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/.pio/libdeps/megaatmega2560/TMC26XStepper",
+                    "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/.pio/libdeps/megaatmega2560/SlowSoftI2CMaster",
+                    "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/.pio/libdeps/megaatmega2560/SailfishRGB_LED",
+                    "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/.pio/libdeps/megaatmega2560/SailfishLCD",
+                    "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/.pio/libdeps/megaatmega2560/Arduino-L6470/src",
+                    "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/.pio/libdeps/megaatmega2560/LiquidTWI2",
+                    "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/.pio/libdeps/megaatmega2560/Adafruit_MAX31865",
+                    "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/.pio/libdeps/megaatmega2560/U8glib-HAL_ID1932/src",
+                    "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/.pio/libdeps/megaatmega2560/Adafruit NeoPixel_ID28",
+                    "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/.pio/libdeps/megaatmega2560/TMCStepper_ID5513/src",
+                    "C:/Users/HB/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                    "C:/Users/HB/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                    "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/.pio/libdeps/megaatmega2560/LiquidCrystal_ID136",
+                    "C:/Users/HB/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                    "C:/Users/HB/.platformio/packages/framework-arduino-avr/cores/arduino",
+                    "C:/Users/HB/.platformio/packages/framework-arduino-avr/variants/mega",
+                    "C:/Users/HB/.platformio/lib/_tmp_installing-yj051apw-package",
+                    "C:/Users/HB/.platformio/lib/_tmp_installing-yzb271tw-package",
+                    "C:/Users/HB/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                    "C:/Users/HB/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                    "C:/Users/HB/.platformio/packages/tool-unity",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=40201",
+                "ARDUINO_AVR_MEGA2560",
+                "__MARLIN_FIRMWARE__",
+                "F_CPU=16000000L",
+                "ARDUINO_ARCH_AVR",
+                "ARDUINO=10808",
+                "__AVR_ATmega2560__",
+                ""
+            ],
+            "intelliSenseMode": "clang-x64",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "compilerPath": "C:/Users/HB/.platformio/packages/toolchain-atmelavr/bin/avr-gcc.exe",
+            "compilerArgs": [
+                "-mmcu=atmega2560",
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}
