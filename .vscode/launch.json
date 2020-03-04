@@ -12,7 +12,7 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug",
-            "executable": "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/.pio/build/megaatmega2560/firmware.elf",
+            "executable": "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/Marlin_For_Robotarm/.pio/build/megaatmega2560/firmware.elf",
             "toolchainBinDir": "C:/Users/HB/.platformio/packages/toolchain-atmelavr/bin",
             "preLaunchTask": {
                 "type": "PlatformIO",
@@ -24,7 +24,7 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (skip Pre-Debug)",
-            "executable": "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/.pio/build/megaatmega2560/firmware.elf",
+            "executable": "c:/Users/HB/Desktop/Robotarm/Marlin_dev_2.1.0/Marlin_For_Robotarm/.pio/build/megaatmega2560/firmware.elf",
             "toolchainBinDir": "C:/Users/HB/.platformio/packages/toolchain-atmelavr/bin",
             "internalConsoleOptions": "openOnSessionStart"
         }
