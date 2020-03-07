@@ -77,8 +77,8 @@ void forward_kinematics_SCARA(const float &a, const float &b, const float &c) {
   cartes.set(arm_xy * cos(c/SCARA_RAD2DEG) - scara_offset[X_AXIS],
              arm_xy * sin(c/SCARA_RAD2DEG) - scara_offset[Y_AXIS],
              a_sin + b_sin - scara_offset[Z_AXIS]); 
-	
-  SERIAL_ECHOLNPAIR(" cartes (X,Y,Z) = (",cartes.x, ", ", cartes.y,", ", cartes.z, ")");
+	// SERIAL_ECHOLNPAIR(" angle (X,Y,Z) = (",a, ", ", b,", ", c, ")");
+  // SERIAL_ECHOLNPAIR(" cartes (X,Y,Z) = (",cartes.x, ", ", cartes.y,", ", cartes.z, ")");
   /*
     SERIAL_ECHOLNPAIR(
       "SCARA FK Angle a=", a,
@@ -175,13 +175,13 @@ void inverse_kinematics(const xyz_pos_t &raw) {
       DEBUG_POS("SCARA IK", delta);
       SERIAL_ECHOLNPAIR("  SCARA (x,y) ", x, ",", y," Theta1=", THETA1, " Theta2=", THETA2);
     //*/
-     SERIAL_ECHOLNPAIR("  SCARA (x,y,z) ", raw.x, ",", raw.y,",",raw.z, " ThetaA=", thrtaA, " ThetaB=", thrtaB, " ThetaC=", thrtaC);
+    //  SERIAL_ECHOLNPAIR("  SCARA (x,y,z) ", raw.x, ",", raw.y,",",raw.z, " ThetaA=", thrtaA, " ThetaB=", thrtaB, " ThetaC=", thrtaC);
 
   #endif // MP_SCARA
 }
 
 void scara_report_positions() {
-  SERIAL_ECHOLNPAIR("SCARA ThetaA:", planner.get_axis_position_degrees(A_AXIS), "  ThetaB:", planner.get_axis_position_degrees(B_AXIS), "  ThetaC:", planner.get_axis_position_degrees(C_AXIS));
+  SERIAL_ECHOLNPAIR("  SCARA (x,y,z) ", current_position[X_AXIS], ",", current_position[Y_AXIS],",",current_position[Z_AXIS],"\nSCARA ThetaA:", planner.get_axis_position_degrees(A_AXIS), "  ThetaB:", planner.get_axis_position_degrees(B_AXIS), "  ThetaC:", planner.get_axis_position_degrees(C_AXIS));
   SERIAL_EOL();
 }
 

@@ -133,7 +133,7 @@
  */
 #if IS_SCARA
   #undef SLOWDOWN
-  #define QUICK_HOME
+  //#define QUICK_HOME
   #define SCARA_PRINTABLE_RADIUS (SCARA_LINKAGE_1 + SCARA_LINKAGE_2)
 #endif
 

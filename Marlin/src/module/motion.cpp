@@ -706,7 +706,6 @@ void restore_feedrate_and_scaling() {
 
     // Fail if attempting move outside printable radius
     if (!position_is_reachable(destination)) return true;
-
     // Get the linear distance in XYZ
     float cartesian_mm = diff.magnitude();
 
@@ -1011,7 +1010,7 @@ void restore_feedrate_and_scaling() {
  */
 void prepare_move_to_destination() {
   apply_motion_limits(destination);
-
+  // SERIAL_ECHO_MSG("motion limits");
   #if EITHER(PREVENT_COLD_EXTRUSION, PREVENT_LENGTHY_EXTRUDE)
 
     if (!DEBUGGING(DRYRUN) && destination.e != current_position.e) {
@@ -1053,7 +1052,7 @@ void prepare_move_to_destination() {
   #if ENABLED(DUAL_X_CARRIAGE)
     if (dual_x_carriage_unpark()) return;
   #endif
-
+      // SERIAL_ECHO_MSG("ready to kinematic\n");
   if (
     #if UBL_SEGMENTED
       #if IS_KINEMATIC // UBL using Kinematic / Cartesian cases as a workaround for now.

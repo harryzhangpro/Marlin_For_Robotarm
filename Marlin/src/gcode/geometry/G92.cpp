@@ -33,7 +33,8 @@
  */
 void GcodeSuite::G92() {
 
-  bool sync_E = false, sync_XYZ = false;
+  bool sync_E = false, sync_XYZ = false, ABC2XYZ = false;
+  static float angles[3];
 
   #if USE_GCODE_SUBCODES
     const uint8_t subcode_G92 = parser.subcode;
@@ -65,6 +66,23 @@ void GcodeSuite::G92() {
       } break;
     #endif
     case 0: {
+      LOOP_ABC(i)  {
+        if (parser.seenval(abc_codes[i])) {
+        ABC2XYZ = true;
+        const float   l = parser.value_axis_units((AxisEnum)i),
+                      v = i == E_AXIS ? l : LOGICAL_TO_NATIVE(l, i),
+                      d = v;
+            #if IS_SCARA || !HAS_POSITION_SHIFT
+              if (i == E_AXIS) sync_E = true; else sync_XYZ = true;
+              angles[i] = v;
+              //delta.set(angles[A_AXIS], angles[B_AXIS], angles[C_AXIS]);
+            #endif
+        }
+      }
+      if(ABC2XYZ == true){
+        forward_kinematics_SCARA(angles[A_AXIS],angles[B_AXIS],angles[C_AXIS]);
+        LOOP_XYZ(j) current_position[j] = cartes[j];
+      }
       LOOP_XYZE(i) {
         if (parser.seenval(axis_codes[i])) {
           const float l = parser.value_axis_units((AxisEnum)i),
@@ -95,6 +113,10 @@ void GcodeSuite::G92() {
     if (WITHIN(active_coordinate_system, 0, MAX_COORDINATE_SYSTEMS - 1))
       coordinate_system[active_coordinate_system] = position_shift;
   #endif
+
+  ENABLE_AXIS_X();
+  ENABLE_AXIS_Y();
+  ENABLE_AXIS_Z();
 
   if    (sync_XYZ) sync_plan_position();
   else if (sync_E) sync_plan_position_e();

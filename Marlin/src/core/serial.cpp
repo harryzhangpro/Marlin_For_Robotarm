@@ -23,7 +23,7 @@
 #include "serial.h"
 #include "language.h"
 
-uint8_t marlin_debug_flags = MARLIN_DEBUG_ALL;
+uint8_t marlin_debug_flags = MARLIN_DEBUG_NONE;
 
 static const char errormagic[] PROGMEM = "Error:";
 static const char echomagic[]  PROGMEM = "echo:";

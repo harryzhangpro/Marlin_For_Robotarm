@@ -483,3 +483,4 @@ struct XYZEval {
 #undef FI
 
 const xyze_char_t axis_codes { 'X', 'Y', 'Z', 'E' };
+const xyz_char_t abc_codes { 'A' , 'B', 'C'};
