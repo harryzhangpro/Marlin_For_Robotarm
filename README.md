@@ -3,7 +3,7 @@
 This is an arduino controlor for 3-axis robot arm.The firmware were based on the Marlin bugfix2.0.x.
 You can try this with Arduino Mega2560 and Ramps 1.4.
 Remember,X motor for big arm,Y motor for small arm,Z motor for rotation.
-BIG arm endstop shuold plug into XMAX,SMALL arm endstop should olug into YMAX.
+BIG arm endstop shuold plug into XMAX,SMALL arm endstop should plug into YMAX.
 
 Enjoy!
 
